@@ -1,4 +1,4 @@
-package nats_connector
+package natsconnector
 
 import (
 	"time"
