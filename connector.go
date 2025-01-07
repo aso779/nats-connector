@@ -47,7 +47,7 @@ func (r *NatsConn) Conn() (*nats.Conn, error) {
 
 			r.log.Error("nats: connection error", zap.Error(err))
 
-			time.Sleep(r.conf.RetryTimeout())
+			time.Sleep(r.conf.RetryTimeout() * time.Second)
 		}
 	}
 
